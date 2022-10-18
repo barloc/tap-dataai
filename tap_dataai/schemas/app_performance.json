@@ -1,0 +1,330 @@
+{
+  "type": [
+    "null",
+    "object"
+  ],
+  "properties": {
+
+    "product_name": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "product_id": {
+      "type": [
+        "null",
+        "number"
+      ]
+    },
+    "product_type": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "product_status": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "unified_product_name": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "unified_product_id": {
+      "type": [
+        "null",
+        "number"
+      ]
+    },
+    "category_name": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "category_id": {
+      "type": [
+        "null",
+        "number"
+      ]
+    },
+    "market_code": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "device_code": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "publisher_name": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "publisher_id": {
+      "type": [
+        "null",
+        "number"
+      ]
+    },
+    "publisher_market": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "publisher_website": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "company_name": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "company_id": {
+      "type": [
+        "null",
+        "number"
+      ]
+    },
+    "parent_company_name": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "parent_company_id": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "company_stock_symbol": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "company_website": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "company_is_public": {
+      "type": [
+        "null",
+        "boolean"
+      ]
+    },
+    "demographics": {
+      "type": ["null", "array"],
+      "items": {
+        "type": "object",
+        "properties": {
+          "start_date": {"type": ["null", "string"]},
+          "end_date": {"type": ["null", "string"]},
+          "granularity": {"type": ["null", "string"]},
+          "country_code": {"type": ["null", "string"]},
+          "device_code": {"type": ["null", "string"]},
+          "product_id": {"type": ["null", "number"]},
+          "age_code": {"type": ["null", "string"]},
+          "gender_code": {"type": ["null", "string"]},
+          "est_demographics_percent": {"type": ["null", "number"]},
+          "est_demographics_index": {"type": ["null", "number"]}
+        }
+      }
+    },
+    "retention": {
+      "type": ["null", "array"],
+      "items": {
+        "type": "object",
+        "properties": {
+          "product_id": {"type": ["null", "number"]},
+          "country_code": {"type": ["null", "string"]},
+          "device_code": {"type": ["null", "string"]},
+          "granularity": {"type": ["null", "string"]},
+          "start_date": {"type": ["null", "string"]},
+          "end_date": {"type": ["null", "string"]},
+          "retention_days": {"type": ["null", "number"]},
+          "est_retention_value": {"type": ["null", "number"]}
+        }
+      }
+    },
+    "app_performance": {
+      "type": [
+        "null",
+        "array"
+      ],
+      "items": {
+        "type": "object",
+        "properties": {
+          "start_date": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "end_date": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "granularity": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "country_code": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "device_code": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "product_id": {
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "est_download": {
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "est_revenue": {
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "est_cumulative_download": {
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "est_cumulative_revenue": {
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "est_rpd": {
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "est_average_active_users": {
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "est_total_active_days": {
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "est_wifi_bytes": {
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "est_usage_penetration": {
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "est_average_session_per_user": {
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "est_average_session_duration": {
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "est_average_time_per_user": {
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "est_total_time": {
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "est_average_active_days": {
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "est_percentage_active_days": {
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "est_share_of_category_time": {
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "est_install_base": {
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "est_install_penetration": {
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "est_open_rate": {
+            "type": [
+              "null",
+              "number"
+            ]
+          }
+        }
+      }
+    }
+  }
+}
