@@ -39,7 +39,7 @@ class DataAIStream(RESTStream):
 
     def get_url_params(
             self, context: Optional[dict], next_page_token: Optional[Any], type_report: str = None,
-            type_values: List = None,
+            type_values: str = None,
             granularity: str = None
     ) -> Dict[str, Any]:
         """Return a dictionary of values to be used in URL parameterization.
@@ -64,7 +64,7 @@ class DataAIStream(RESTStream):
             type_report = self.config.get("type_report")
         if type_values is None:
             type_values = self.config.get("type_values")
-        params[type_report] = ",".join(type_values)
+        params[type_report] = type_values
 
         if granularity is None:
             granularity = self.config.get("granularity")
@@ -89,7 +89,7 @@ class DataAIStream(RESTStream):
         decorated_request = self.request_decorator(self._request)
 
         type_report = self.config.get("type_report")
-        type_values = self.config.get("type_values")
+        type_values = self.config.get("type_values").split(',')
         granularity = self.config.get("granularity")
 
         magic_divisor = 30
@@ -115,13 +115,13 @@ class DataAIStream(RESTStream):
                 break
 
             current_params = self.get_url_params(context, next_page_token=None, type_report=type_report,
-                                                 type_values=current_ids, granularity=granularity)
+                                                 type_values=",".join(current_ids), granularity=granularity)
             prepared_request = self.prepare_request(context=context, params=current_params)
             resp = decorated_request(prepared_request, context)
 
             report_id = resp.json().get('report_id', None)
             if report_id is None:
-                raise Exception(f"No report_id for report. {resp}".content)
+                raise Exception(f"No report_id for report. {resp.content}")
 
             report = None
             prepared_request_report_id = self.prepare_request(context=context, report_id=report_id)

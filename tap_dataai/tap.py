@@ -32,9 +32,9 @@ class TapDataAI(Tap):
         ),
         th.Property(
             "type_values",
-            th.ArrayType(th.StringType),
+            th.StringType,
             required=True,
-            description="Ids of the products or companies (array)."
+            description="Ids of the products or companies (comma separated string)."
         ),
         th.Property(
             "granularity",
@@ -44,9 +44,9 @@ class TapDataAI(Tap):
         ),
         th.Property(
             "countries",
-            th.ArrayType(th.StringType),
+            th.StringType,
             required=True,
-            description="Countries in the report (array)."
+            description="Countries in the report (comma separated string)."
         ),
         th.Property(
             "bundles",
