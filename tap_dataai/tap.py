@@ -22,7 +22,7 @@ class TapDataAI(Tap):
             "auth_token",
             th.StringType,
             required=True,
-            description="The token to authenticate against the API service"
+            description="The token to authenticate against the API service",
         ),
         th.Property(
             "type_report",
