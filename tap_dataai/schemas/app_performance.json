@@ -110,7 +110,7 @@
     "parent_company_id": {
       "type": [
         "null",
-        "string"
+        "number"
       ]
     },
     "company_stock_symbol": {
