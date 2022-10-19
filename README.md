@@ -32,9 +32,9 @@ pipx install git+https://github.com/ORG_NAME/tap-dataai.git@main
 |:--------------------|:--------:|:-------:|:--------------------------------------------------------|
 | auth_token          | True     | None    | The token to authenticate against the API service       |
 | type_report         | True     | None    | Must be product_id or company_id.                       |
-| type_values         | True     | None    | Ids of the products or companies (array).               |
+| type_values         | True     | None    | Ids of the products or companies (comma separated string).               |
 | granularity         | True     | None    | The granularity of the report (monthly, weekly, daily). |
-| countries           | True     | None    | Countries in the report (array).                        |
+| countries           | True     | None    | Countries in the report (comma separated string).                        |
 | bundles             | True     | None    | Bundles in the report.                                  |
 | devices             | False    | all_supported | Devices in the report.                                  |
 | start_date          | True     | None    | The earliest record date to sync                        |
