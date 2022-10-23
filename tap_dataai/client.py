@@ -109,7 +109,7 @@ class DataAIStream(RESTStream):
             self.logger.info(f'Current batch ids: min - {min_current_batch}, max - {max_current_batch}')
 
             current_ids = type_values[min_current_batch:max_current_batch]
-            min_current_batch = max_current_batch + 1
+            min_current_batch = max_current_batch
 
             if len(current_ids) == 0:
                 break
