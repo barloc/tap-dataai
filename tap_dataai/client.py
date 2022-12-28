@@ -38,7 +38,7 @@ class DataAIStream(RESTStream):
         return headers
 
     def get_url_params(
-            self, context: Optional[dict], next_page_token: Optional[Any], type_report: str = None,
+            self, context: Optional[Dict], next_page_token: Optional[Any], type_report: str = None,
             type_values: str = None,
             granularity: str = None
     ) -> Dict[str, Any]:
@@ -77,7 +77,7 @@ class DataAIStream(RESTStream):
         params["end_date"] = self.config.get("end_date")
         return params
 
-    def request_records(self, context: dict | None) -> Iterable[dict]:
+    def request_records(self, context: Optional[Dict]) -> Iterable[dict]:
         """Request records from REST endpoint(s), returning response records.
 
         Args:
@@ -151,7 +151,7 @@ class DataAIStream(RESTStream):
         yield from self.parse_response(result_products)
 
     def prepare_request(
-            self, context: dict | None, next_page_token: _TToken = None, report_id: str = None, params: Dict = None
+            self, context: Optional[Dict], next_page_token: _TToken = None, report_id: str = None, params: Dict = None
     ) -> requests.PreparedRequest:
         """Prepare a request object for this stream.
 
