@@ -1,3 +1,5 @@
+# Meltano and singer are not usable for us, so this tap has been moved to the archive.
+
 # tap-dataai
 
 `tap-dataai` is a Singer tap for API of the data.ai service. Now it can download such reports as: `app-performance`.
